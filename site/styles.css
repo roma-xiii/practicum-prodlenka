@@ -11,3 +11,9 @@
 .brand-logo{display:block;width:96px;height:auto}.brand{min-height:64px}@media(min-width:760px){.brand-logo{width:120px}}
 
 .restart-section{margin-top:24px;max-width:400px}.result-layout .action-row:has([data-action="restart"]){display:block}
+
+/* Persistent primary action, including iPhone home-indicator clearance. */
+body:has(.bottom-action){padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+.bottom-action,.result-layout .bottom-action{position:fixed;z-index:20;left:0;right:0;bottom:0;display:flex;justify-content:center;margin:0;padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));background:var(--paper);border-top:1px solid var(--line);box-shadow:0 -4px 18px #252a240a}
+.bottom-action>.primary{width:100%;max-width:580px;flex:1;min-height:52px}
+html{scroll-padding-bottom:110px}
